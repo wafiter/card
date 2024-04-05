@@ -1,0 +1,108 @@
+body{
+    background-color: #da20d1;
+    overflow: hidden;
+}
+
+#titulo{
+    color: #130f0f;
+    top: 10%;   
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    position: absolute;
+    font-family: cursive;
+    text-align: center;
+}
+
+#frase{
+    color: white;
+    top: 30%;   
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    position: absolute;
+    font-family: cursive;
+    font-size: 150%;
+    text-align: center;
+}
+
+.balao{
+    width: 70px;
+    height: 70px;
+    border-radius: 100% 100% 15% 100%;
+    transform: rotateZ(45deg);
+    background-color: aqua;
+    position: absolute;
+    bottom: -100px;
+    animation: animacaoBalao 7s infinite ease-in;
+    opacity: 0.7;
+}
+
+.balao::before{
+    content: '';
+    width: 1.5px;
+    height: 60px;
+    background-color: rgb(60, 185, 194);
+    position: absolute;
+    transform: rotateZ(-45deg) translate(21px, 106px);
+}
+
+.balao::after{
+    content: '';
+    width: 10px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(211, 24, 143, 0.946);
+    position: absolute;
+    transform: translate(40px, 5px) rotateZ(-60deg);
+
+}
+
+@keyframes animacaoBalao{
+    0%{
+        bottom: -100px;
+    }
+    100%{
+        bottom: 800px;
+    }
+}
+
+.balao:nth-child(0){
+    left: 10%;
+}
+.balao:nth-child(1){
+    left: 13%;
+    animation-duration: 6s;
+}
+.balao:nth-child(2){
+    left: 20%;
+    animation-duration: 5s;
+}
+.balao:nth-child(3){
+    left: 50%;
+    animation-duration: 7.5s;
+}
+.balao:nth-child(4){
+    left: 56%;
+    animation-duration: 4s;
+}
+.balao:nth-child(5){
+    left: 40%;
+    animation-duration: 5.5s;
+}
+.balao:nth-child(6){
+    left: 70%;
+    animation-duration: 8s;
+}
+.balao:nth-child(7){
+    left: 80%;
+    animation-duration: 6.5s;
+}
+.balao:nth-child(8){
+    left: 88%;
+    animation-duration: 4.6s;
+}
+.balao:nth-child(9){
+    left: 93%;
+    animation-duration: 5.7s;
+}
